@@ -6,6 +6,10 @@ import axios from 'axios';
 import Header from './components/Header';
 import Input from './components/Input';
 import TweedrFeed from './components/TweedrFeed';
+import {
+        BrowserRouter as Router,
+        Route
+        } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +23,7 @@ class App extends Component {
 
 createTweed(record){
     // this pushes a new obj into state.todos array
-    axios.post('https://tweedr.herokuapp.com/api/tweedrfeed', {
+    axios.post('https://tweedr-api.herokuapp.com/api/tweedrfeed', {
     tweed: record
   })
   .then(function (res) {
@@ -33,7 +37,7 @@ createTweed(record){
   }
 
 showname() {
-  let targetURL = "https://tweedr.herokuapp.com/api/tweedrfeed";
+  let targetURL = "https://tweedr-api.herokuapp.com/api/tweedrfeed";
     axios.get(targetURL)
   .then((res) => {
     this.setState({
@@ -49,13 +53,16 @@ componentDidMount(){
 
   render() {
     return (
+      <Router>
       <div className="App">
-        <Header />
-        <Input createTweed={this.createTweed}/>
-        <div className="tweedr">
-        <TweedrFeed showallTweeds={this.state.tweed}/>
-        </div>
+        <Route path="/tweedr/" component={() => (<Header />) }/>
+        <Route path="/tweedr/" component={() => (<Input createTweed={this.createTweed}/>) }/>
+      <div className="tweedr">
+        <Route path="/tweedr/" component={() => 
+            (<TweedrFeed showallTweeds={this.state.tweed}/>) }/>
       </div>
+      </div>
+      </Router>
     );
   }
 }
