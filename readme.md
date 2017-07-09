@@ -1,12 +1,14 @@
-General Assembly's Group Homework
-
-## Tweedr
+## [Tweedr](https://francheska-guzman.github.io/tweedr/)
 
 ### Team
 
-Esraa Alaarag<br/>
-Naomi Meyer<br/>
-Francheska Guzman
+* Esraa Alaarag
+* Naomi Meyer
+* Francheska Guzman
+
+### Description
+
+This is a General Assembly's group homework to practice React.js, as well practice GitHub as a group by creating branches and delegating tasks for each contributor.
 
 ### React Components
 
