@@ -8,7 +8,7 @@
 
 ### Description
 
-This is a General Assembly's group homework to practice the front-end and back-end of a web application, as well practice GitHub as a group by creating branches and delegating tasks for each contributor.
+This is a General Assembly's group homework to practice the front-end and back-end of a web application, as well practice project workflow.
 
 ### React Components
 
