@@ -1,4 +1,4 @@
-## [Tweedr](https://francheska-guzman.github.io/tweedr/)
+# Tweedr
 
 ### Team
 
