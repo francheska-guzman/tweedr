@@ -1,16 +1,28 @@
 # Tweedr
 
-### Team
+### Table of Contents
 
-* Esraa Alaarag
-* Naomi Meyer
-* Francheska Guzman
+1. [About the project](#about)
+2. [Description](#description)
+3. [How to use](#instructions)
+4. [React components](#components)
+4. [Technologies used](#technologies)
 
-### Description
+## <a id="about">About the project</a>
 
-This is a General Assembly's group homework to practice the front-end and back-end of a web application, as well practice project workflow.
+General Assembly's Web Development Immersive <br />
+Group Homework <br />
+Developed by Esraa Alaarag, Naomi Meyer, and Francheska Guzman.
 
-### React Components
+## <a id="description">Description</a>
+
+Tweedr takes an input of a tweed, and render all the tweeds from the database into the browser.
+
+## <a id="instructions">How to use</a>
+
+Use the provided input field to write a Tweed, and press the "Submit" button. Your tweed will be automatically rendered. Notice that you can't delete or update any tweed.
+
+## <a id="components">React components</a>
 
 1. App: Holds calls to the database.
 2. Header: App name.
@@ -18,7 +30,7 @@ This is a General Assembly's group homework to practice the front-end and back-e
 4. TweedrFeed: Holds Tweed components, which reflect the information in the database.
 5. Tweed: Holds one individual tweed.
 
-### Technologies Used
+## <a id="technologies">Technologies used</a>
 
 * HTML
 * CSS
