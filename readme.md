@@ -6,7 +6,7 @@
 2. [Description](#description)
 3. [How to use](#instructions)
 4. [React components](#components)
-4. [Technologies used](#technologies)
+5. [Technologies used](#technologies)
 
 ## <a id="about">About the project</a>
 
