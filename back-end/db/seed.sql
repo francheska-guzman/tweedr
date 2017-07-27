@@ -1,4 +1,7 @@
-DROP DATABASE IF EXISTS tweedrapi;
-CREATE DATABASE tweedrapi;
-\c tweedrapi;
-\i schema.sql;
+CREATE TABLE tweedrfeed(
+    id SERIAL PRIMARY KEY, 
+    tweed VARCHAR NOT NULL
+);
+
+INSERT INTO tweedrfeed (tweed) VALUES
+('Welcome to the tweedr app!')
