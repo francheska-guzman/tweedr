@@ -23,7 +23,7 @@ class App extends Component {
 
 createTweed(record){
     // this pushes a new obj into state.todos array
-    axios.post('https://tweedr-api.herokuapp.com/api/tweedrfeed', {
+    axios.post('https://tweedrapi.herokuapp.com/api/tweedrfeed', {
     tweed: record
   })
   .then(function (res) {
@@ -37,7 +37,7 @@ createTweed(record){
   }
 
 showname() {
-  let targetURL = "https://tweedr-api.herokuapp.com/api/tweedrfeed";
+  let targetURL = "https://tweedrapi.herokuapp.com/api/tweedrfeed";
     axios.get(targetURL)
   .then((res) => {
     this.setState({
