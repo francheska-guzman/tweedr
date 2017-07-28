@@ -11,8 +11,6 @@ var cors = require('cors');
 var sassMiddleware = require('node-sass-middleware');
 
 var index = require('./routes/index');
-// adding API route to render all the json file on that page
-var api = require('./routes/api');
 var users = require('./routes/users');
 
 var app = express();

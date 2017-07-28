@@ -1,15 +1,14 @@
 var promise = require('bluebird');
 var options = { promiseLib: promise };
-// import pg promise library interface for PostgreSQL to handel database requests
+// Import pg promise library interface for PostgreSQL to handel database requests.
 let pgp = require('pg-promise')(options);
-// load the postgress database location from  .env
+// Load the postgress database location from .env
 let connectionString = process.env.DATABASE_URL;
-// connect  db promise to my database
+// Connect db promise to my database.
 let db = pgp(connectionString);
 
-// The axios get comes here
 function getAlltweed(req, res, next) {
-  // return all the records from the database using pg-promise method any , then
+  // Return all the records from the database using pg-promise method any.
   db.any('SELECT * FROM tweedrfeed')
     .then(function(data) {
       console.log('DATA:', data);
@@ -24,9 +23,10 @@ function getAlltweed(req, res, next) {
       return next(err);
     });
 }
-// The axios get : id comes here
+
+// The axios get :id will pass here.
 function getOnetweed(req, res, next) {
-  // parse the requested url to get the required tweed id using pg-promise method one , then
+  // Parse the requested url to get the required tweed id using pg-promise method one, then
   let id = parseInt(req.params.id);
     db.one('select * from tweedrfeed where id = $1', id)
     .then(function(data) {
@@ -41,14 +41,7 @@ function getOnetweed(req, res, next) {
       return next(err);
     });
 }
-// this function add one tweed to the database using postman
-/*
-post
-    {
-    "tweed": "I  can tweed",
-  }
 
-*/
 function createtweed(req, res, next) {
   console.log(req);
   console.log('req.body ===>', req.body)
@@ -68,14 +61,6 @@ function createtweed(req, res, next) {
     });
 }
 
-// change the information inside the database
-/*
- put
-  {
-    "id" : 12,
-    "tweed": "I  can develop APIs",
-  }
-*/
 function updatetweed(req, res, next) {
   db.none('update tweedrfeed set tweed=$1 where id=$2', [req.body.tweed,parseInt(req.params.id)
     ])
@@ -91,7 +76,8 @@ function updatetweed(req, res, next) {
       return next(err);
     });
 }
-// this function delete the tweeds which it's id was after url
+
+// This function delete the tweeds which it's id was after url.
 function deletetweed(req, res, next) {
   let id = parseInt(req.params.id);
   db.result('delete from tweedrfeed where id = $1', id)
