@@ -35,7 +35,7 @@ Use the provided input field to write a Tweed, and press the "Submit" button. Yo
 * HTML
 * CSS
 * JavaScript
-* React.js
+* React
 * Node.js
 * Express.js
 * PostgreSQL
